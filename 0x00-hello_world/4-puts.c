@@ -1,5 +1,9 @@
 #include <stdio.h>
-/* Use puts to display text. */
+/**
+ * main - Entry point
+ * Use puts to display text
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
