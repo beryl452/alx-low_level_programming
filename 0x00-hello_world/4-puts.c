@@ -1,4 +1,5 @@
 #include <stdio.h>
+/* Use puts to display text. */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
