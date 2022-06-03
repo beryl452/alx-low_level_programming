@@ -14,6 +14,6 @@ do {
 	putchar(c);
 	count++;
 	c++;
-} while (count < 25);
+} while (count < 26);
 return (0);
 }
