@@ -17,8 +17,11 @@ do {
 	c = 'A';
 	count = 0;
 	}
+	else
+	{
 	count++;
 	c++;
+	}
 } while (count < 26);
 putchar('$');
 return (0);
