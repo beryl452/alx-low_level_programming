@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.>
+#include <stdlib.h>
 #include <time.h>
 /**
  * main - Entry point
@@ -12,7 +12,7 @@ int main(void)
 	int count;
 do {
 	putchar(c);
-	if (c!='z')
+	if (c != 'z')
 	{
 	c = 'A';
 	count = 0;
