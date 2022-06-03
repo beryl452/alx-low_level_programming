@@ -10,10 +10,10 @@ int main(void)
 {
 	char c = 'a';
 	int count;
-	while (count < 26)
-	{
+do {
 	putchar(c);
 	count++;
 	c++;
-	}
+} while (count < 25);
+return (0);
 }
