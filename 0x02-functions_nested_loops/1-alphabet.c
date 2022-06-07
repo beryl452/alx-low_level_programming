@@ -5,13 +5,13 @@
  */
 void print_alphabet(void)
 {
-	char letter = 'a';
+	char c = 'a';
 	int count;
 
 do {
-	putchar(letter);
+	putchar(c);
 	count++;
-	letter++;
+	c++;
 } while (count < 26);
 putchar('\n');
 }
