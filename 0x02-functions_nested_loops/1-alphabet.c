@@ -14,5 +14,4 @@ do {
 	letter++;
 } while (count < 26);
 putchar('\n');
-return (0);
 }
