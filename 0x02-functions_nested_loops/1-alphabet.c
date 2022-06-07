@@ -6,7 +6,7 @@
 void print_alphabet(void)
 {
 	char c = 'a';
-	int count;
+	int count = 0;
 
 do {
 	putchar(c);
