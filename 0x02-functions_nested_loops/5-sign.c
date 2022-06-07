@@ -18,7 +18,7 @@ return (0);
 }
 else
 {
-putchar('-1');
+putchar('-');
 return (-1);
 }
 }
