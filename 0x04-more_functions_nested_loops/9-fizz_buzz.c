@@ -32,5 +32,6 @@ for (i = 1; i <= 100; i++)
 		printf(" ");
 	}
 }
+printf("\n");
 return (0);
 }
