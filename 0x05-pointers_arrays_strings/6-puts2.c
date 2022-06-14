@@ -12,6 +12,9 @@ int i, length;
 
 length = strlen(str);
 for (i = 0; i < length; i++)
-	printf("%c", str[i]);
+{
+	if (i % 2 == 0)
+		printf("%c", str[i]);
+}
 printf("\n");
 }
