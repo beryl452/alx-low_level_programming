@@ -10,7 +10,7 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int m = n;
+	size_t m = n;
 
 	strncat(dest, src, m)
 	return (dest);
