@@ -14,7 +14,7 @@ int tmp, i;
 	for (i = 0; i < n; i++)
 	{
 	tmp = a[i];
-	a[i] = a[n - i];
-	a[n - i] = tmp;
+	a[i] = a[n];
+	a[n] = tmp;
 	}
 }
