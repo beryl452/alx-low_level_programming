@@ -12,7 +12,7 @@ int i;
 
 for (i = 0; str[i] != '\0'; i++)
 {
-if (str[i] == ',' ||
+if ((str[i] == ',' ||
 	str[i] == ';' ||
 	str[i] == '.' ||
 	str[i] == '!' ||
@@ -21,9 +21,9 @@ if (str[i] == ',' ||
 	str[i] == '(' ||
 	str[i] == ')' ||
 	str[i] == '{' ||
-	str[i] == '}')
+	str[i] == '}') && str[i + 1] >= 97 && str[i + 1] <=122)
 {
-str[i + 1] = string_toupper(str[i + 1]);
+str[i + 1] -= 32;
 }
 }
 return (str);
