@@ -34,15 +34,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 }
 
 /**
- * check_string - check if string is NULL
+ * check_strings - check if string is NULL
  * @string: the string
  *
  * Description: Check if string is NULL
- * Return:@string
+ * Return: pointer to @string
  */
 char *check_strings(char *string)
 {
 	if (string == NULL)
 		string = '(nil)';
-	return (string)
+	return (string);
 }
