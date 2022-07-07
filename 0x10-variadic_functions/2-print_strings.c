@@ -14,20 +14,17 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 
 	va_start(ap, n);
-	if (n != 0)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
+		if (i != n - 1)
 		{
-			if (i != n - 1)
-			{
-				if (separator)
-					printf("%d%s", check_strings(va_arg(ap, int)), separator);
-				else
-					printf("%d", check_strings(va_arg(ap, int)));
-			}
+			if (separator)
+				printf("%s%s", check_strings(va_arg(ap, char *)), separator);
 			else
-				printf("%d", va_arg(ap, int));
+				printf("%s", check_strings(va_arg(ap, char *)));
 		}
+		else
+			printf("%s", va_arg(ap, char *));
 	}
 	printf("\n");
 	va_end(ap);
@@ -43,6 +40,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 char *check_strings(char *string)
 {
 	if (string == NULL)
-		string = '(nil)';
+		string = "(nil)";
 	return (string);
 }
