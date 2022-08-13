@@ -10,9 +10,9 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd = 0, i;
-	ssize_t n_read , n_wrote;
-	char *buf = NULL;
+	int fd = 0;
+	ssize_t n_read, n_wrote;
+	char *buf;
 
 	if (filename == NULL)
 		return (0);
@@ -29,14 +29,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	n_wrote = write(STDOUT_FILENO, buf, letters); 
+	n_wrote = write(STDOUT_FILENO, buf, letters);
 	if (n_wrote == -1)
 	{
 		free(buf);
 		close(fd);
 		return (0);
-	
+	}
 	free(buf);
-	close(fd):
+	close(fd);
 	return (n_read);
 }
