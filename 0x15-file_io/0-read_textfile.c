@@ -14,18 +14,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int nb_chars = 0;
 	char *buf = NULL;
 
-	if (!filename)
+	if (filename == NULL)
 		return (0);
 	fd = open(filename, 0_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (0);
 	buf = malloc(letters);
 	if (!buf)
 		return (0);
 	nb_chars = read(fd, buf, letters);
 	if (nb_chars < 0)
+	{
 		free(buf);
 		return (0);
+	}
 	buf[nb_chars] = '\0';
 	close(fd);
 	for (i = 0; buf[i]; i++)
