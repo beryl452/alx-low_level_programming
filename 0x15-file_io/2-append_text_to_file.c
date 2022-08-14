@@ -16,7 +16,7 @@ int _strlen(char *str)
 
 /**
  * append_text_to_file - Appends text at the end of a file
- * @filename: The name of the file
+ * @filename: name of the file
  * @text_content: content to put in the file
  *
  * Return: 1 on success, -1 on failure
