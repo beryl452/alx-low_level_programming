@@ -5,16 +5,11 @@
  * @head: linked list
  */
 void free_list(list_t *head)
-{	
-	list_t *tmp;
-	
-	if (head != NULL)
+{		
+	while (head)
 	{
-		while (head->next != NULL)
-		{
-			tmp = head;
-			free(tmp->str);
-			free(tmp);
-		}
+		free(head->str);
+		free(head);
+		head = head->next;
 	}
 }
