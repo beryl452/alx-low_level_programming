@@ -2,7 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <stdlib.ħ>
+#include <unistd.ħ>
 
 void _putchar(char c);
 unsigned int binary_to_uint(const char *b);
