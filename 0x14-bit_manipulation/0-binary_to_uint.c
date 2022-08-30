@@ -9,23 +9,15 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int bin_nb = 0;
-	int len = 0, i;
+	int i = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-	while (b[len] != '\0')
-		len++;
-	len -= 1;
-
-	i = 0;
-	while (b[i])
+	for (; b[i]; i++)
 	{
-		if ((b[i] != '0') && (b[i] != '1'))
-			return (sum);
-		if (b[i] == '1)
-			bin_nb += (1 * (1 << len));
-		i++;
-		len--;
+		if (b[i] < 48 || b[i] > 49)
+			return (0);
+		bin_nb = 2 * bin_nb + (b[i] - 48);
 	}
 	return (bin_nb);
 }
