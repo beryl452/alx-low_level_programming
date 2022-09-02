@@ -5,13 +5,12 @@
  * add_dnodeint - add node to front of doubly linked list
  * @head: pointer to head of list
  * @n:node data
- * Return address of new node, or NULL if failed
+ * Return: address of new node, or NULL if failed
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-
 	dlistint_t *new;
-	
+
 	if (head == NULL)
 	{
 		return (NULL);
