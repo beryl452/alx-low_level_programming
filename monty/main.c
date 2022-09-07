@@ -14,7 +14,8 @@
 int main(int argc, char *argv[])
 {
 	int fd;
-	char *buffer;
+	unsigned int line = 1;
+	char *buffer, *token;
 	ssize_t n_read;
 
 	if (argc != 2)
@@ -37,6 +38,11 @@ int main(int argc, char *argv[])
 		free(buffer);
 		close(fd);
 		exit(EXIT_FAILURE);
+	}
+	token = strtok(buffer, "\n\t\v\r");
+	while (token != NULL)
+	{
+	
 	}
 	free(buffer);
 	close(fd);
