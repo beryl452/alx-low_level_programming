@@ -13,10 +13,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd;
+	int fd, ispush = 0;
 	unsigned int line = 1;
 	char *buffer, *token;
 	ssize_t n_read;
+	stack_t *h = NULL;
 
 	if (argc != 2)
 	{
@@ -42,8 +43,20 @@ int main(int argc, char *argv[])
 	token = strtok(buffer, "\n\t\v\r");
 	while (token != NULL)
 	{
-	
+		if (get_op_func(token) != 0)
+		{
+			get_op_func(token)(&h, line);
+		}
+		else
+		{
+			free_doublist(&h);
+			printf("L%d: unknown instruction %s\n", line, token);
+			exit(EXIT_FAILURE);
+		}
+		line++;
+		token = strtok(NULL, "\n\t\v\r");
 	}
+	free_doublist(&h);
 	free(buffer);
 	close(fd);
 	return (0);

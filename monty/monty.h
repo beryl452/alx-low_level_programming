@@ -3,7 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h> 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,4 +37,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int is_number(const char *n);
+int add_end_node(stack_t **h, int n);
+void delete_end_node(stack_t **h);
+void free_doublist(stack_t **h);
+void (*get_op_func(char *token))(stack_t **stack, unsigned int line_number);
+void push(stack_t **h, unsigned int line_number, const char *n);
+void pop(stack_t **h, unsigned int line_number);
+void pall(stack_t **h, unsigned int line_number);
 #endif /* MONTY_H */
