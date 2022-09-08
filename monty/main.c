@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd, ispush = 0;
+	int fd;
 	unsigned int line = 1;
 	char *buffer, *token;
 	ssize_t n_read;
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	token = strtok(buffer, "\n\t\v\r");
 	while (token != NULL)
 	{
-		if (get_op_func(token) != 0)
+		if (get_op_func(token) != NULL)
 		{
 			get_op_func(token)(&h, line);
 		}

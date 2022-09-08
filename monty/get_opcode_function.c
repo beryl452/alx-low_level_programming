@@ -8,9 +8,10 @@
 void (*get_op_func(char *token))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t instruction_s[] = {
+		{"push", push},
 		{"pop", pop},
 		{"pall", pall},
-		{NULL,NULL}
+		{NULL, NULL}
 	};
 	int i = 0;
 
